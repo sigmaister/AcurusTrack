@@ -1,0 +1,14 @@
+cycler==0.10.0
+dataclasses==0.7
+evenvizion==0.9.1
+filterpy==1.4.5
+kiwisolver==1.2.0
+matplotlib==3.2.0
+numpy==1.19.2
+opencv-python==4.4.0.42
+pandas==1.0.1
+pyparsing==2.4.7
+python-dateutil==2.8.1
+pytz==2020.1
+scipy==1.5.2
+six==1.15.0
