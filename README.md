@@ -131,7 +131,7 @@ As you can see, the accuracy is higher when using AcurusTrack (especially in the
 AcurusTrack is licensed under the GNU General Public License, either version 3 of the License, or (at your option) any later version.
 All the third-party open-source software used in this project is listed in Third-Party Open Source Software Notice together with the according licenses. 
 
-https://git.oxagile.com/rnd/computer-vision/research/data-association-problem/markov-chain-monte-carlo-data-association-for-multiple-target-tracking/-/tree/dev-ksenia-performance-fixed-coords
+https://github.com/AIHunters/AcurusTrack
 
 ### Send us your feedback
 
