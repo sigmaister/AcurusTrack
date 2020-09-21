@@ -118,7 +118,6 @@ class TrackVisualization:
             if not success:
                 break
             final_frame = self.get_final_frame(frame)
-            final_frame = self.get_final_frame(frame)
             if DrawingParams.draw_logo:
                 final_frame = self.add_logo(final_frame)
 
