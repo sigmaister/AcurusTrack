@@ -1,5 +1,5 @@
-### AcurusTrack. Data association component for precise multi-tracking
-AcurusTrack is a component enabling highly predictable object multi-tracking. It is based on a custom data association approach.
+### AcurusTrack. Python data association component for precise multi-object tracking
+AcurusTrack is a highly predictable multiple object tracker. It is based on a custom data association approach.
 
 This component does not depend on objects' nature - we work with arbitrary ones.  You can serve any metadata as input. Here we display the examples of the metadata derived by face and pose estimators. You can use any of the estimators you prefer to create the data for input. 
 
