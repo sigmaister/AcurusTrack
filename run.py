@@ -72,7 +72,7 @@ def main(arguments):
             arguments.path_to_homography_dict)
     else:
         homography_dict = None
-        assert not MetaProcessingParams.fixed_coordinate_system
+        assert not MetaProcessingParams.fixed_coordinate_system, 'If you do not want use fixed coordinates, make this parameter False'
     with open(arguments.detections, 'r') as clean__:
         detections = json.load(clean__)
         detections = {int(k): v for k, v in detections.items()}
