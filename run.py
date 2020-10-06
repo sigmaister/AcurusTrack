@@ -26,6 +26,7 @@ import cv2
 
 from FCS.fixed_coordinate_system import reformat_homography_dict
 from pipeline import MainAlgo
+from config import MetaProcessingParams
 
 
 # logging.basicConfig(level=logging.DEBUG)
@@ -65,11 +66,13 @@ def main(arguments):
         os.makedirs(os.environ['save_dir'])
 
     timer0 = timer()
+
     if arguments.path_to_homography_dict is not None:
         homography_dict = reformat_homography_dict(
             arguments.path_to_homography_dict)
     else:
         homography_dict = None
+        assert not MetaProcessingParams.fixed_coordinate_system
     with open(arguments.detections, 'r') as clean__:
         detections = json.load(clean__)
         detections = {int(k): v for k, v in detections.items()}
