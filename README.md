@@ -105,6 +105,10 @@ If you choose to use it:
     
     * visualization.py - functions for custom meta visualization
     ![meta_visualization](examples/images/meta_vis_aihunters.png)
+    
+### Important notice
+
+Please NOTE that we have slightly changed a souce code of the filterpy library, you can find it at repository.
 
 ###  Run the analysis
 
