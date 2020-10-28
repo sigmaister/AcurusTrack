@@ -42,6 +42,8 @@ class TrackVisualization:
         self.height = int(self.capture.get(cv2.CAP_PROP_FRAME_HEIGHT))
         if path_to_homography_dict is not None:
             self.homography_dict = reformat_homography_dict(path_to_homography_dict)
+        else:
+            self.homography_dict = None
         self.files_dir = files_dir
         self.files_info = {}
         self.start = start
@@ -66,11 +68,16 @@ class TrackVisualization:
             elif file.endswith('.csv'):
                 meta_pandas = read_multiindex_pd(file_path)
                 meta_dict = from_dataframe_to_dict(meta_pandas)
-                curr_file_info = fixed_to_original_coordinate_system(meta_dict, self.homography_dict,
-                                                                     int(os.environ.get('fixed_coordinate_resize_h')),
-                                                                     int(os.environ.get('fixed_coordinate_resize_w')),
-                                                                     self.height,
-                                                                     self.width)
+                if self.homography_dict is not None:
+                    curr_file_info = fixed_to_original_coordinate_system(meta_dict, self.homography_dict,
+                                                                         int(os.environ.get(
+                                                                             'fixed_coordinate_resize_h')),
+                                                                         int(os.environ.get(
+                                                                             'fixed_coordinate_resize_w')),
+                                                                         self.height,
+                                                                         self.width)
+                else:
+                    curr_file_info = meta_dict
 
             else:
                 raise ValueError('Check you input file formats!')
@@ -311,7 +318,7 @@ if __name__ == '__main__':
     parser.add_argument('--path_to_homography_dict',
                         default=None)
     parser.add_argument('--start', default=1, type=int)
-    parser.add_argument('--end')
+    parser.add_argument('--end', type=int)
     parser.add_argument('--resize_constant', default=4, type=int)
     parser.add_argument('--name')
 
