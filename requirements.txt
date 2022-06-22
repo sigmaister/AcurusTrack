@@ -4,7 +4,7 @@ evenvizion==0.9.1
 filterpy==1.4.5
 kiwisolver==1.2.0
 matplotlib==3.2.0
-numpy==1.19.2
+numpy==1.22.0
 opencv-python==4.4.0.42
 pandas==1.0.1
 pyparsing==2.4.7
